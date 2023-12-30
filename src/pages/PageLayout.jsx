@@ -11,7 +11,7 @@ const PageLayout = () => {
    useEffect(() => {
       const checkIfMobile = () => {
 
-         const isSmallScreen = window.innerWidth <= 768;
+         const isSmallScreen = window.innerWidth <= 430;
 
          setIsMobile(isSmallScreen);
       };
