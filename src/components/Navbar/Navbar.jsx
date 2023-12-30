@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
-import { ChevronFirst, MoreVertical, CircleDollarSignIcon, LifeBuoy, Receipt, Boxes, ShoppingCart, UserCircle, BarChart3, LayoutDashboard, Settings, ChevronLast } from 'lucide-react'
-import { cn } from '../lib/utils'
+import { cn } from '../../lib/utils'
+import { ChevronFirst, MoreVertical, ChevronLast } from 'lucide-react'
+import { SidebarItem } from './SidebarItem'
+import { MobileNavItem } from './MobileNavItem'
+import { useGlobalStore } from '../../stores/globalStore'
+import NavItems from '../../Data/NavData'
 import {
    DropdownMenu,
    DropdownMenuContent,
@@ -8,25 +12,11 @@ import {
    DropdownMenuSeparator,
    DropdownMenuTrigger,
    DropdownMenuItem
-} from "./ui/dropdown-menu"
-import { SidebarItem } from './SidebarItem'
-import { useGlobalStore } from '../stores/globalStore'
+} from "../ui/dropdown-menu"
 
 const Navbar = () => {
    const [expanded, setExpanded] = useState(true)
    const isMobile = useGlobalStore((state) => state.isMobile)
-
-   const items = [
-      { text: 'Dashboard', icon: LayoutDashboard, href: '/' },
-      { text: 'Statistics', icon: BarChart3 },
-      { text: 'Accounts', icon: UserCircle, href: '/app/accounts' },
-      { text: 'Products', icon: Boxes, href: '/app/products' },
-      { text: 'Purchase', icon: ShoppingCart, href: '/app/purchase' },
-      { text: 'Sale', icon: Receipt, href: '/app/sale' },
-      { text: 'Payments', icon: CircleDollarSignIcon, href: '/app/payments' },
-      { text: 'Settings', icon: Settings },
-      { text: 'Help', icon: LifeBuoy },
-   ]
 
    return (
       <>
@@ -50,7 +40,7 @@ const Navbar = () => {
                      </div>
                      {/* Ul */}
                      <ul className='flex-1 px-3 mt-5'>
-                        {items.map(({ text, icon, href }, index) => {
+                        {NavItems?.map(({ text, icon, href }, index) => {
                            return (
                               <React.Fragment key={text}>
                                  {(index === 7) ? <hr className='my-3' /> : null}
@@ -94,12 +84,22 @@ const Navbar = () => {
             )
             :
             (
-               null
+               <nav className='fixed bottom-0 left-0 w-screen py-4 bg-foreground px-7 '>
+                  <div className='flex items-center justify-between'>
+                     {
+                        NavItems?.map(({ icon, solidIcon, href }, index) => {
+                           return (
+                              <React.Fragment key={index}>
+                                 <MobileNavItem icon={icon} solidIcon={solidIcon} href={href} />
+                              </React.Fragment>
+                           );
+                        })
+                     }
+                  </div>
+               </nav>
             )
          }
-         <nav className='bg-red-400 fixed bottom-[50px] left-0 w-screen'>
-            dsad
-         </nav>
+
       </>
    )
 }

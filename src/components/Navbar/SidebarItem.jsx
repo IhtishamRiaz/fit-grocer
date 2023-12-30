@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom'
-import { cn } from '../lib/utils'
+import { cn } from '../../lib/utils'
 
 export const SidebarItem = ({ icon: Icon, text, expanded, href }) => {
 
