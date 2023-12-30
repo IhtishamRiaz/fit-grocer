@@ -1,6 +1,6 @@
 import React from 'react'
 import HandWave from '../../assets/images/hand-wave.svg?react'
-import SearchIcon from '../../assets/images/search-logo.svg?react'
+import SearchIcon from '../../assets/images/search-icon.svg?react'
 import { userInfo } from '../../Data/MockupData'
 import { calculateCurrentMeal } from '../../lib/utils'
 

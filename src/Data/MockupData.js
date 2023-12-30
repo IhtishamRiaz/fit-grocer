@@ -1,6 +1,11 @@
 export const userInfo = {
    name: 'Daniyal',
-   email: 'daniyat0000@gmail.com'
+   email: 'daniyat0000@gmail.com',
+   number: '(888) 987-6543',
+   address: {
+      line1: '789 Maple Street, Los Angeles,',
+      line2: 'CA 90001'
+   }
 }
 
 export const allCategories = [
@@ -40,6 +45,7 @@ export const allDishes = [
       restaurant: 'Healthy Bites',
       description: 'A refreshing green salad paired with creamy mashed potatoes for a delightful combination of flavors and textures.',
       rating: 4.2,
+      isFavourite: false
    },
    {
       id: 2,
@@ -50,6 +56,7 @@ export const allDishes = [
       restaurant: 'Garden Fresh',
       description: 'Experience the crispness of fresh vegetables in this vibrant salad that bursts with color and nutrition.',
       rating: 4.0,
+      isFavourite: true
    },
    {
       id: 3,
@@ -60,6 +67,7 @@ export const allDishes = [
       description: 'Indulge in the mouthwatering delight of a perfectly grilled beef steak generously topped with a rich and savory mushroom sauce. A culinary masterpiece!',
       price: 25.27,
       rating: 4.8,
+      isFavourite: false
    },
    {
       id: 4,
@@ -70,16 +78,18 @@ export const allDishes = [
       description: 'Tender ribeye steak slice seasoned to perfection and grilled to your liking. Savor the juicy flavors in every bite.',
       price: 20.99,
       rating: 4.9,
+      isFavourite: false
    },
    {
       id: 5,
       name: 'Vegan strawberry cake',
-      img: '/images/strawberry-cake',
+      img: '/images/strawberry-cake.jpg',
       category: 'Dessert',
       price: 10.12,
       restaurant: 'Sweet Retreat',
       description: 'Delight in the guilt-free pleasure of our vegan strawberry cake. Every bite is a burst of fruity goodness!',
       rating: 4.7,
+      isFavourite: false
    },
    {
       id: 6,
@@ -90,6 +100,7 @@ export const allDishes = [
       restaurant: 'Dolce Delights',
       description: 'Embark on a journey of indulgence with our exquisite White Chocolate and Custard Tart Cake. Experience the rich and creamy taste of this decadent treat!',
       rating: 4.7,
+      isFavourite: false
    },
    {
       id: 7,
@@ -100,6 +111,7 @@ export const allDishes = [
       restaurant: 'Mindy Fox',
       description: 'This cumin- and paprika-spiced Peruvian-inspired chicken gets added punch from a tangy green sauce and a crisp, bright avocado and cucumber salad.',
       rating: 4.6,
+      isFavourite: false
    },
    {
       id: 8,
@@ -110,6 +122,7 @@ export const allDishes = [
       restaurant: 'Chicken Experts',
       description: 'The essence of this pulao is the yakhni, which means meat stock or broth: The delicate flavor of the chicken stock is absorbed by the rice.',
       rating: 4.8,
+      isFavourite: false
    },
 ];
 

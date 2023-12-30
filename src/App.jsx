@@ -6,6 +6,9 @@ import Home from './pages/Home'
 import Favourites from './pages/Favourites'
 import Tracking from './pages/Tracking'
 import Profile from './pages/Profile'
+import ProductDescPage from './pages/ProductDescPage'
+import Cart from './pages/Cart'
+import Checkout from './pages/Checkout'
 
 function App() {
 
@@ -18,6 +21,9 @@ function App() {
                <Route path='/tracking' element={<Tracking />} />
                <Route path='/profile' element={<Profile />} />
             </Route>
+            <Route path='/prod' element={<ProductDescPage />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
          </Routes>
       </>
    )
