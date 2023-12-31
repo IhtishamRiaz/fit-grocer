@@ -15,7 +15,7 @@ const Categories = () => {
          </div>
 
          {/* Categiry Slider */}
-         <div className='overflow-hidden [max-width:calc(100vw-60px)] mt-5' ref={emblaRef}>
+         <div className='overflow-hidden [max-width:calc(100vw-75px)] mt-5' ref={emblaRef}>
             <div className='flex gap-4'>
                {
                   categories?.map(({ id, name, img, color }) => {

@@ -78,7 +78,7 @@ const Navbar = () => {
             )
             :
             (
-               <nav className='fixed bottom-0 left-0 w-screen py-4 bg-foreground px-7 '>
+               <nav className='fixed bottom-0 left-0 w-screen py-4 bg-foreground px-7 z-50'>
                   <div className='flex items-center justify-between'>
                      {
                         NavItems?.map(({ icon, solidIcon, href }, index) => {

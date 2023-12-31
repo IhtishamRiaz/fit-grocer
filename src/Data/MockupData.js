@@ -60,7 +60,7 @@ export const allProducts = [
       restaurant: 'Garden Fresh',
       description: 'Experience the crispness of fresh vegetables in this vibrant salad that bursts with color and nutrition.',
       rating: 4.0,
-      isFavourite: true
+      isFavourite: false
    },
    {
       id: 3,

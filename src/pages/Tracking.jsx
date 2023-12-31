@@ -8,7 +8,7 @@ const Tracking = () => {
             <Link to='/' >
                <BackIcon className='inline' />
             </Link>
-            <h1 className='absolute text-2xl font-semibold top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]'>Order Tracking</h1>
+            <h1 className='absolute text-2xl font-semibold top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]'>Tracking</h1>
          </div>
       </div>
    )

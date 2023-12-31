@@ -35,7 +35,7 @@ const PageLayout = () => {
       <>
          <div className='flex min-h-screen'>
             <Navbar />
-            <main className='min-h-screen pb-28 basis-full pt-14 px-7 xl:px-10'>
+            <main className='min-h-screen pb-28 flex-grow pt-14 px-7 xl:px-10'>
                <Outlet />
             </main>
          </div>

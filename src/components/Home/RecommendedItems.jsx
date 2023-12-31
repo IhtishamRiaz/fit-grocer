@@ -10,7 +10,7 @@ const RecommendedItems = ({ products }) => {
          </div>
 
          {/* Recommended Items Container */}
-         <div className='flex flex-wrap gap-5 mt-5'>
+         <div className='flex flex-wrap justify-center lg:justify-start gap-5 mt-5'>
             {
                products?.map(({ id, name, img, price, isFavourite }) => (
                   <DishCard key={id} id={id} name={name} img={img} price={price} isFavourite={isFavourite} />

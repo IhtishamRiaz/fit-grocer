@@ -84,7 +84,7 @@ const ProductDescPage = () => {
                      <button className='w-10 h-10 text-3xl border rounded-full border-primary text-primary' onClick={decrement}>-</button>
                   </div>
                </div>
-               <div className='flex-grow h-[350px] bg-no-repeat drop-shadow-2xl' style={{ backgroundImage: `url(${closeUpImg})` }}>
+               <div className='flex-grow h-[350px] bg-no-repeat drop-shadow-2xl' style={{ backgroundImage: `url(${closeUpImg})`, backgroundSize: '350px', }}>
                </div>
             </div>
 
