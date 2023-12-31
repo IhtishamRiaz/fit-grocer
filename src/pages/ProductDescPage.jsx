@@ -25,7 +25,7 @@ const ProductDescPage = () => {
 
    const addToCart = async () => {
       await setOrder({
-         total: +order.total + +calculatedPrice,
+         total: (+order.total + +calculatedPrice).toFixed(2),
          items: [
             ...order.items,
             {
@@ -59,9 +59,9 @@ const ProductDescPage = () => {
 
    return (
       <div className='min-h-screen'>
-         <div className='bg-foreground pt-12 pb-6 mb-8 rounded-b-[50px]'>
+         <div className='bg-foreground pt-12 pb-6 mb-8 xl:mb-20 rounded-b-[50px]'>
             {/* Header */}
-            <div className='flex items-center justify-between pb-8 px-7'>
+            <div className='flex items-center justify-between pb-8 px-7 xl:max-w-[1200px] mx-auto'>
                <Link to='/'>
                   <BackIcon className='inline' />
                </Link>
@@ -69,18 +69,18 @@ const ProductDescPage = () => {
             </div>
 
             {/* Product Info */}
-            <div className='px-7'>
+            <div className='px-7 xl:max-w-[1200px] mx-auto'>
                <h1 className='text-2xl font-semibold leading-9'>{name}</h1>
                <h3 className='mt-2 mb-3 text-lg text-muted'>By {restaurant}</h3>
                <p className='flex gap-1.5'><RatingIcon />{rating}</p>
             </div>
 
             {/* Product Image and Quantity*/}
-            <div className='flex items-center pl-7'>
+            <div className='flex items-center pl-7 xl:max-w-[1200px] mx-auto'>
                <div className='basis-[30%] flex-shrink-0'>
-                  <div className='flex flex-col'>
+                  <div className='flex flex-col xl:flex-row-reverse xl:items-center xl:justify-end'>
                      <button className='w-10 h-10 text-3xl border rounded-full border-primary text-primary' onClick={increment}>+</button>
-                     <span className='py-2.5 pl-3 text-3xl font-inter'>{quantity}</span>
+                     <span className='py-2.5 pl-3 xl:pr-3 text-3xl font-inter'>{quantity}</span>
                      <button className='w-10 h-10 text-3xl border rounded-full border-primary text-primary' onClick={decrement}>-</button>
                   </div>
                </div>
@@ -89,14 +89,14 @@ const ProductDescPage = () => {
             </div>
 
             {/* Product Description */}
-            <div className='mt-2 px-7'>
+            <div className='mt-2 px-7 xl:max-w-[1200px] mx-auto'>
                <h3 className='mb-1 text-lg font-semibold'>Description</h3>
                <p className='text-muted'>{description}</p>
             </div>
          </div>
 
          {/* Add to cart button */}
-         <div className='flex items-center justify-between pb-4 px-7'>
+         <div className='flex items-center justify-between pb-4 px-7 xl:max-w-[1200px] mx-auto'>
             <span className='font-inter'>
                <p className='text-[#434141] text-lg'>Price</p>
                <h3 className='text-3xl'>{calculatedPrice} <span className='text-primary'>$</span></h3>

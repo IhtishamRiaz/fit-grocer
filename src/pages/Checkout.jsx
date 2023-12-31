@@ -19,7 +19,7 @@ const Checkout = () => {
    }
 
    return (
-      <div className='flex flex-col min-h-screen pt-12 pb-6 px-7'>
+      <div className='flex flex-col min-h-screen pt-12 pb-6 px-7 xl:max-w-[1200px] mx-auto'>
          <div className='relative mb-7'>
             <Link to='/cart'>
                <BackIcon />
@@ -28,7 +28,7 @@ const Checkout = () => {
          </div>
 
          {/* Page Content*/}
-         <div className='flex-grow mb-8 space-y-8'>
+         <div className='flex-grow mb-8 space-y-8 max-w-[500px]'>
             <PaymentOptions />
             <DeliveryDetails />
             <OrderDetails />

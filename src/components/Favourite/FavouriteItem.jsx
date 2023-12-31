@@ -13,7 +13,7 @@ const FavouriteItem = ({ id, price, name, img, }) => {
 
    return (
       <Link to={`/prod/${id}`} className='block'>
-         <div className="bg-card p-[10px] pr-6 flex gap-6 rounded-lg">
+         <div className="bg-card p-[10px] pr-6 flex gap-6 rounded-lg max-w-[900px] mx-auto">
             {/* Card Img */}
             <div className='object-cover aspect-square w-[92px] h-[92px] '>
                <img src={img} alt="potato" className='rounded-[15px] aspect-square object-cover' />
