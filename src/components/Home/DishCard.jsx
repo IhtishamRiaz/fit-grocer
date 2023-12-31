@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 
 const DishCard = ({ id, name, img, price, isFavourite }) => {
    return (
-      <Link className='basis-[45%] sm:basis-auto max-w-[180px]' to={`/prod/${id}`}>
-         <div className='rounded-lg bg-card overflow-hidden shadow-sm'>
+      <div className='rounded-lg bg-card overflow-hidden shadow-sm basis-[45%] sm:basis-auto max-w-[200px]'>
+         <Link className='' to={`/prod/${id}`}>
             {/* Card Image */}
             <div>
                <img className='object-cover w-full aspect-square' src={img} alt={name} />
@@ -21,8 +21,8 @@ const DishCard = ({ id, name, img, price, isFavourite }) => {
                   }
                </div>
             </div>
-         </div>
-      </Link>
+         </Link>
+      </div>
    )
 }
 

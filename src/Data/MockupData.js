@@ -1,6 +1,6 @@
-export const userInfo = {
+export const userData = {
    name: 'Daniyal',
-   email: 'daniyat0000@gmail.com',
+   email: 'daniyal00@gmail.com',
    number: '(888) 987-6543',
    address: {
       line1: '789 Maple Street, Los Angeles,',
@@ -39,6 +39,7 @@ export const allProducts = [
    {
       id: 1,
       name: 'Green salad with mashed potatoes',
+      shortName: 'Green salad',
       img: '/images/potato-salad.jpg',
       closeUpImg: '/images/potato-salad-plate.png',
       category: 'Salad',
@@ -50,7 +51,8 @@ export const allProducts = [
    },
    {
       id: 2,
-      name: 'Fresh vegetable salad',
+      name: 'Fresh and Healthy Vegetable salad',
+      shortName: 'Vegetable salad',
       img: '/images/vegetable-salad.jpg',
       closeUpImg: '/images/vegetable-salad-plate.png',
       category: 'Salad',
@@ -63,6 +65,7 @@ export const allProducts = [
    {
       id: 3,
       name: 'Grilled beef steak with mushroom sauce',
+      shortName: 'Grilled steak',
       img: '/images/mushroom-sauce-steak.jpg',
       closeUpImg: '/images/mushroom-sauce-steak-plate.png',
       category: 'Steak',
@@ -74,7 +77,8 @@ export const allProducts = [
    },
    {
       id: 4,
-      name: 'Premium Ribeye Steak',
+      name: 'Premium Wagyu Ribeye Steak',
+      shortName: 'Ribeye steak',
       img: '/images/rib-eye-steak.jpg',
       closeUpImg: '/images/rib-eye-steak-plate.png',
       category: 'Steak',
@@ -86,7 +90,8 @@ export const allProducts = [
    },
    {
       id: 5,
-      name: 'Vegan strawberry cake',
+      name: 'Vegan Red Strawberry cake',
+      shortName: 'Strawberry cake',
       img: '/images/strawberry-cake.jpg',
       closeUpImg: '/images/strawberry-cake-plate.png',
       category: 'Dessert',
@@ -99,6 +104,7 @@ export const allProducts = [
    {
       id: 6,
       name: 'White Chocolate and Custard Tart Cake',
+      shortName: 'Chocolate cake',
       img: '/images/white-chocolate-cake.jpg',
       closeUpImg: '/images/white-chocolate-cake-plate.png',
       category: 'Dessert',
@@ -111,6 +117,7 @@ export const allProducts = [
    {
       id: 7,
       name: 'Peruvian-Style Roast Chicken with Tangy Green Sauce',
+      shortName: 'Peruvian chicken',
       img: '/images/peruvian-chicken.jpg',
       closeUpImg: '/images/peruvian-chicken-plate.png',
       category: 'Chicken',
@@ -122,7 +129,8 @@ export const allProducts = [
    },
    {
       id: 8,
-      name: 'Chicken Yakhni Pulao',
+      name: 'Savory Chicken Yakhni Pulao',
+      shortName: 'Yakhni Pulao',
       img: '/images/chicken-pulao.jpg',
       closeUpImg: '/images/chicken-pulao-plate.png',
       category: 'Chicken',

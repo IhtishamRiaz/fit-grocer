@@ -34,7 +34,7 @@ const Cart = () => {
                <h3 className='text-3xl'>{order.total} <span className='text-primary'>$</span></h3>
             </span>
             <Link to='/checkout'>
-               <Button>
+               <Button disabled={order.items.length === 0}>
                   Checkout
                </Button>
             </Link>

@@ -22,6 +22,7 @@ const Button = ({ children, danger, isLoading, fullWidth, secondary, ghost, type
             text-white
             bg-primary
             hover:bg-primary/80
+            disabled:bg-primary/80
             focus-visible:outline-primary/60
             transition-colors
         `,

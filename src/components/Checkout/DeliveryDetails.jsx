@@ -1,7 +1,9 @@
 import React from 'react'
-import { userInfo } from '../../Data/MockupData'
+import { useGlobalStore } from '../../stores/globalStore'
 
 const DeliveryDetails = () => {
+   const userInfo = useGlobalStore((state) => state.userInfo)
+
    return (
       <div>
          <h2 className='font-semibold text-2xl mb-4'>Delivery details</h2>

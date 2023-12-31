@@ -1,12 +1,12 @@
 import React from 'react'
 import HandWave from '../../assets/images/hand-wave.svg?react'
 import SearchIcon from '../../assets/images/search-icon.svg?react'
-import { userInfo } from '../../Data/MockupData'
 import { calculateCurrentMeal } from '../../lib/utils'
+import { useGlobalStore } from '../../stores/globalStore'
 
 const Header = () => {
-
    const currentMeal = calculateCurrentMeal()
+   const userInfo = useGlobalStore((state) => state.userInfo)
 
    return (
       <div className='flex justify-between'>

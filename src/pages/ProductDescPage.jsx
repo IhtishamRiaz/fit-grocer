@@ -7,6 +7,7 @@ import Button from '../components/ui/button'
 import { Link, useParams } from 'react-router-dom'
 import { useProductStore } from '../stores/productStore'
 import { useGlobalStore } from '../stores/globalStore'
+import toast from 'react-hot-toast'
 
 const ProductDescPage = () => {
    const products = useProductStore((state) => state.products)
@@ -21,8 +22,8 @@ const ProductDescPage = () => {
    const [quantity, setQuantity] = useState(1)
    const [calculatedPrice, setCalculatedPrice] = useState(price)
 
-   const addToCart = () => {
-      setOrder({
+   const addToCart = async () => {
+      await setOrder({
          total: +order.total + +calculatedPrice,
          items: [
             ...order.items,
@@ -34,6 +35,7 @@ const ProductDescPage = () => {
             }
          ]
       })
+      toast.success('Successfully added to cart')
    }
 
    const increment = () => {

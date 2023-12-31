@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { cn } from '../../lib/utils'
 
-export const SidebarItem = ({ icon: Icon, text, expanded, href }) => {
+export const SidebarItem = ({ icon: Icon, solidIcon: SolidIcon, text, expanded, href }) => {
 
    const location = useLocation();
    const path = location.pathname;
@@ -11,12 +11,13 @@ export const SidebarItem = ({ icon: Icon, text, expanded, href }) => {
       <Link to={href}>
          <li
             className={
-               cn(`group relative flex items-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer`,
-                  isActive ? 'bg-primary text-white'
-                     : 'hover:bg-primary/10 text-gray-600'
+               cn(`group relative flex items-center py-2 px-3 my-1 text-muted font-medium rounded-md cursor-pointer`,
+                  isActive ? 'text-primary' : 'hover:bg-primary/20'
                )}
          >
-            <Icon size={20} />
+            {
+               isActive ? <SolidIcon /> : <Icon />
+            }
             <span className={cn(`overflow-hidden transition-all`, expanded ? 'w-52 ml-3' : 'w-0')}>
                {text}
             </span>

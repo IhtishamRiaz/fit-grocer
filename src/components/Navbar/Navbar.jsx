@@ -17,6 +17,7 @@ import {
 const Navbar = () => {
    const [expanded, setExpanded] = useState(true)
    const isMobile = useGlobalStore((state) => state.isMobile)
+   const userInfo = useGlobalStore((state) => state.userInfo)
 
    return (
       <>
@@ -25,14 +26,9 @@ const Navbar = () => {
                <aside className='sticky top-0 h-screen'>
                   <nav className='flex flex-col h-full bg-white border-r shadow-md'>
                      {/* Logo */}
-                     <div className='flex items-center justify-between p-4 pb-2'>
-                        <img
-                           src="https://img.logoipsum.com/262.svg"
-                           alt=""
-                           className={cn(`overflow-hidden transition-all`, expanded ? 'w-32' : 'w-0')}
-                        />
+                     <div className='flex items-center justify-end p-4 pb-2'>
                         <button
-                           className='p-1.5 rounded-lg bg-brand-50 hover:bg-brand-100'
+                           className='p-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary'
                            onClick={() => setExpanded(curr => !curr)}
                         >
                            {expanded ? <ChevronFirst /> : <ChevronLast />}
@@ -40,11 +36,12 @@ const Navbar = () => {
                      </div>
                      {/* Ul */}
                      <ul className='flex-1 px-3 mt-5'>
-                        {NavItems?.map(({ text, icon, href }, index) => {
+                        {NavItems?.map(({ text, icon, solidIcon, href }) => {
                            return (
                               <React.Fragment key={text}>
-                                 {(index === 7) ? <hr className='my-3' /> : null}
-                                 <SidebarItem text={text} icon={icon} expanded={expanded} href={href} />
+                                 {
+                                    href === '/cart' ? null : <SidebarItem text={text} icon={icon} solidIcon={solidIcon} expanded={expanded} href={href} />
+                                 }
                               </React.Fragment>
                            );
                         })}
@@ -52,14 +49,14 @@ const Navbar = () => {
                      {/* User Avatar */}
                      <div className='flex p-3 border-t'>
                         <img
-                           src="https://ui-avatars.com/api/?background=D8B4FE&color=6B21A8&bold=true"
+                           src={`https://ui-avatars.com/api/?background=ffb6a0&color=ff4b15&bold=true&name=${userInfo?.name}`}
                            alt=""
                            className='w-10 h-10 rounded-md'
                         />
                         <div className={cn(`flex justify-between overflow-hidden transition-all items-center`, expanded ? 'w-52 ml-3' : 'w-0')}>
                            <div className='leading-4'>
-                              <h4 className='font-bold'>John Doe</h4>
-                              <span className='text-sm text-gray-600'>johndow@gmail.com</span>
+                              <h4 className='font-bold'>{userInfo?.name}</h4>
+                              <span className='text-sm text-gray-600'>{userInfo?.email}</span>
                            </div>
                            {/* DropDownMenu */}
                            <DropdownMenu>
@@ -69,9 +66,6 @@ const Navbar = () => {
                               <DropdownMenuContent className="w-56">
                                  <DropdownMenuLabel>Settings</DropdownMenuLabel>
                                  <DropdownMenuSeparator />
-                                 <DropdownMenuItem>
-                                    Profile
-                                 </DropdownMenuItem>
                                  <DropdownMenuItem>
                                     Logout
                                  </DropdownMenuItem>
