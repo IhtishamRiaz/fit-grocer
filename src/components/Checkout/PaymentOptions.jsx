@@ -6,11 +6,11 @@ import PayoneerLogo from '../../assets/images/payoneer-logo.svg'
 const PaymentOptions = () => {
    return (
       <div>
-         <h2 className='font-semibold text-2xl mb-6'>Payment</h2>
-         <div className='bg-card px-9 rounded-lg divide-y'>
+         <h2 className='mb-6 text-2xl font-semibold'>Payment</h2>
+         <div className='divide-y rounded-lg bg-card px-9'>
 
             <label className='flex items-center justify-between cursor-pointer py-2.5'>
-               <div className='flex items-center gap-4'>
+               <div className='flex items-center gap-4 text-sm font-medium'>
                   <img src={DebitCardLogo} />
                   Debit/Credit card
                </div>
@@ -19,7 +19,7 @@ const PaymentOptions = () => {
             </label>
 
             <label className='flex items-center justify-between cursor-pointer py-2.5'>
-               <div className='flex items-center gap-4'>
+               <div className='flex items-center gap-4 text-sm font-medium'>
                   <img src={PayPalLogo} />
                   PayPal
                </div>
@@ -28,7 +28,7 @@ const PaymentOptions = () => {
             </label>
 
             <label className='flex items-center justify-between cursor-pointer py-2.5'>
-               <div className='flex items-center gap-4'>
+               <div className='flex items-center gap-4 text-sm font-medium'>
                   <img src={PayoneerLogo} />
                   Payoneer
                </div>

@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CategoryItem from './CategoryItem'
-import { allCategories } from '../../Data/MockupData'
 import useEmblaCarousel from 'embla-carousel-react'
+import { useProductStore } from '../../stores/productStore'
 
 const Categories = () => {
-
-   const [emblaRef, emblaApi] = useEmblaCarousel({ containScroll: 'trimSnaps', dragFree: true })
+   const [emblaRef] = useEmblaCarousel({ containScroll: 'trimSnaps', dragFree: true })
+   const categories = useProductStore((state) => state.categories)
 
    return (
       <div className='mt-12'>
@@ -18,7 +18,7 @@ const Categories = () => {
          <div className='overflow-hidden [max-width:calc(100vw-60px)] mt-5' ref={emblaRef}>
             <div className='flex gap-4'>
                {
-                  allCategories?.map(({ id, name, img, color }) => {
+                  categories?.map(({ id, name, img, color }) => {
                      return (
                         <div key={id} className='flex-shrink-0 min-w-0'>
                            <CategoryItem name={name} img={img} color={color} />

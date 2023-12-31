@@ -22,7 +22,7 @@ function App() {
                <Route path='/tracking' element={<Tracking />} />
                <Route path='/profile' element={<Profile />} />
             </Route>
-            <Route path='/prod' element={<ProductDescPage />} />
+            <Route path='/prod/:id' element={<ProductDescPage />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/success' element={<SuccessMessage />} />

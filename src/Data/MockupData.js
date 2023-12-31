@@ -35,7 +35,7 @@ export const allCategories = [
    },
 ]
 
-export const allDishes = [
+export const allProducts = [
    {
       id: 1,
       name: 'Green salad with mashed potatoes',
