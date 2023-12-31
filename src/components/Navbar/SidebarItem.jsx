@@ -11,24 +11,16 @@ export const SidebarItem = ({ icon: Icon, solidIcon: SolidIcon, text, expanded, 
       <Link to={href}>
          <li
             className={
-               cn(`group relative flex items-center py-2 px-3 my-1 text-muted font-medium rounded-md cursor-pointer`,
-                  isActive ? 'text-primary' : 'hover:bg-primary/20'
+               cn(`group relative flex items-center justify-center p-2 my-1 text-muted font-medium rounded-full cursor-pointer`,
+                  isActive ? 'text-primary' : 'hover:bg-primary/10'
                )}
          >
             {
                isActive ? <SolidIcon /> : <Icon />
             }
-            <span className={cn(`overflow-hidden transition-all`, expanded ? 'w-52 ml-3' : 'w-0')}>
+            <span className={cn(`overflow-hidden transition-all`, expanded ? 'w-28 xl:w-52 ml-3' : 'w-0')}>
                {text}
             </span>
-            {/* Tooltip */}
-            {!expanded &&
-               <div
-                  className='absolute z-[5000000px] invisible px-2 py-1 ml-6 text-sm transition-all -translate-x-3 rounded-md w-max left-full bg-brand-100 text-brand-800 opacity-20 group-hover:visible group-hover:opacity-100 group-hover:translate-x-0'
-               >
-                  {text}
-               </div>
-            }
          </li>
       </Link>
    );

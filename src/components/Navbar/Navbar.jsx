@@ -25,10 +25,10 @@ const Navbar = () => {
             (
                <aside className='sticky top-0 h-screen'>
                   <nav className='flex flex-col h-full bg-white border-r shadow-md'>
-                     {/* Logo */}
-                     <div className='flex items-center justify-end p-4 pb-2'>
+                     {/* Toggle */}
+                     <div className={cn('flex items-center justify-end p-4 pb-2', !expanded && 'justify-center')}>
                         <button
-                           className='p-1.5 rounded-lg bg-primary/10 hover:bg-primary/20 text-primary'
+                           className='p-1.5 rounded-full bg-primary/10 hover:bg-primary/20 text-primary'
                            onClick={() => setExpanded(curr => !curr)}
                         >
                            {expanded ? <ChevronFirst /> : <ChevronLast />}
@@ -47,13 +47,13 @@ const Navbar = () => {
                         })}
                      </ul>
                      {/* User Avatar */}
-                     <div className='flex p-3 border-t'>
+                     <div className={cn('flex items-center p-3 border-t', !expanded && 'justify-center')}>
                         <img
                            src={`https://ui-avatars.com/api/?background=ffb6a0&color=ff4b15&bold=true&name=${userInfo?.name}`}
                            alt=""
-                           className='w-10 h-10 rounded-md'
+                           className={cn('w-10 h-10 rounded-md xl:block', expanded && 'hidden')}
                         />
-                        <div className={cn(`flex justify-between overflow-hidden transition-all items-center`, expanded ? 'w-52 ml-3' : 'w-0')}>
+                        <div className={cn(`flex justify-between overflow-hidden transition-all items-center`, expanded ? 'w-40 xl:w-52 ml-3' : 'w-0')}>
                            <div className='leading-4'>
                               <h4 className='font-bold'>{userInfo?.name}</h4>
                               <span className='text-sm text-gray-600'>{userInfo?.email}</span>

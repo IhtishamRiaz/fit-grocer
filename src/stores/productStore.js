@@ -5,9 +5,16 @@ export const useProductStore = create((set) => ({
    // All Products
    products: [],
    setProducts: (product) => set({ product }),
+   toggleFavourite: (productId) => {
+      set((state) => {
+         const updatedProducts = state.products.map((product) =>
+            product.id === productId ? { ...product, isFavourite: !product.isFavourite } : product
+         );
+         console.log("toggled favourite");
+         return { products: updatedProducts };
+      });
+   },
    fetchProducts: async () => {
-      // To Simulate an artificial delay
-      // await new Promise((resolve) => setTimeout(resolve, 1000));
       const fetchedProducts = allProducts;
       set({ products: fetchedProducts });
    },
@@ -16,8 +23,6 @@ export const useProductStore = create((set) => ({
    categories: [],
    setCategories: (categories) => set({ categories }),
    fetchCategories: async () => {
-      // To Simulate an artificial delay
-      // await new Promise((resolve) => setTimeout(resolve, 1000));
       const fetchedCategories = allCategories;
       set({ categories: fetchedCategories });
    },

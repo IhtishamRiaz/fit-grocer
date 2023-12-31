@@ -2,8 +2,16 @@ import React from 'react'
 import Heart from '../../assets/images/heart-dish.svg?react'
 import HeartSolid from '../../assets/images/heart-dish-active.svg?react'
 import { Link } from 'react-router-dom'
+import { useProductStore } from '../../stores/productStore'
 
 const DishCard = ({ id, name, img, price, isFavourite }) => {
+   const toggleFavourite = useProductStore((state) => state.toggleFavourite)
+
+   const handleFavourite = (e) => {
+      e.preventDefault()
+      toggleFavourite(id)
+   }
+
    return (
       <div className='rounded-lg bg-card overflow-hidden shadow-sm basis-[45%] sm:basis-auto max-w-[200px]'>
          <Link className='' to={`/prod/${id}`}>
@@ -17,7 +25,7 @@ const DishCard = ({ id, name, img, price, isFavourite }) => {
                <div className='flex items-center justify-between mt-2'>
                   <p><span className='text-primary'>$ </span>{price}</p>
                   {
-                     isFavourite ? <HeartSolid /> : <Heart />
+                     isFavourite ? <HeartSolid onClick={handleFavourite} /> : <Heart onClick={handleFavourite} />
                   }
                </div>
             </div>

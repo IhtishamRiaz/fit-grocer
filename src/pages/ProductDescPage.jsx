@@ -10,6 +10,7 @@ import { useGlobalStore } from '../stores/globalStore'
 import toast from 'react-hot-toast'
 
 const ProductDescPage = () => {
+   const toggleFavourite = useProductStore((state) => state.toggleFavourite)
    const products = useProductStore((state) => state.products)
    const { id } = useParams()
 
@@ -47,6 +48,10 @@ const ProductDescPage = () => {
       }
    }
 
+   const handleFavourite = () => {
+      toggleFavourite(+id)
+   }
+
    useEffect(() => {
       setCalculatedPrice((quantity * price).toFixed(2))
    }, [quantity])
@@ -60,7 +65,7 @@ const ProductDescPage = () => {
                <Link to='/'>
                   <BackIcon className='inline' />
                </Link>
-               {isFavourite ? <HeartSolid /> : <Heart />}
+               {isFavourite ? <HeartSolid onClick={handleFavourite} className="cursor-pointer" /> : <Heart onClick={handleFavourite} className="cursor-pointer" />}
             </div>
 
             {/* Product Info */}
