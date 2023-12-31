@@ -9,6 +9,7 @@ import Profile from './pages/Profile'
 import ProductDescPage from './pages/ProductDescPage'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import SuccessMessage from './pages/SuccessMessage'
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
             <Route path='/prod' element={<ProductDescPage />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/checkout' element={<Checkout />} />
+            <Route path='/success' element={<SuccessMessage />} />
          </Routes>
       </>
    )

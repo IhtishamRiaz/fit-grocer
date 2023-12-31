@@ -40,6 +40,7 @@ export const allDishes = [
       id: 1,
       name: 'Green salad with mashed potatoes',
       img: '/images/potato-salad.jpg',
+      closeUpImg: '/images/potato-salad-plate.png',
       category: 'Salad',
       price: 12.22,
       restaurant: 'Healthy Bites',
@@ -51,6 +52,7 @@ export const allDishes = [
       id: 2,
       name: 'Fresh vegetable salad',
       img: '/images/vegetable-salad.jpg',
+      closeUpImg: '/images/vegetable-salad-plate.png',
       category: 'Salad',
       price: 11.22,
       restaurant: 'Garden Fresh',
@@ -62,6 +64,7 @@ export const allDishes = [
       id: 3,
       name: 'Grilled beef steak with mushroom sauce',
       img: '/images/mushroom-sauce-steak.jpg',
+      closeUpImg: '/images/mushroom-sauce-steak-plate.png',
       category: 'Steak',
       restaurant: 'Steak House',
       description: 'Indulge in the mouthwatering delight of a perfectly grilled beef steak generously topped with a rich and savory mushroom sauce. A culinary masterpiece!',
@@ -73,6 +76,7 @@ export const allDishes = [
       id: 4,
       name: 'Premium Ribeye Steak',
       img: '/images/rib-eye-steak.jpg',
+      closeUpImg: '/images/rib-eye-steak-plate.png',
       category: 'Steak',
       restaurant: 'Grill Master',
       description: 'Tender ribeye steak slice seasoned to perfection and grilled to your liking. Savor the juicy flavors in every bite.',
@@ -84,6 +88,7 @@ export const allDishes = [
       id: 5,
       name: 'Vegan strawberry cake',
       img: '/images/strawberry-cake.jpg',
+      closeUpImg: '/images/strawberry-cake-plate.png',
       category: 'Dessert',
       price: 10.12,
       restaurant: 'Sweet Retreat',
@@ -95,6 +100,7 @@ export const allDishes = [
       id: 6,
       name: 'White Chocolate and Custard Tart Cake',
       img: '/images/white-chocolate-cake.jpg',
+      closeUpImg: '/images/white-chocolate-cake-plate.png',
       category: 'Dessert',
       price: 10.12,
       restaurant: 'Dolce Delights',
@@ -106,6 +112,7 @@ export const allDishes = [
       id: 7,
       name: 'Peruvian-Style Roast Chicken with Tangy Green Sauce',
       img: '/images/peruvian-chicken.jpg',
+      closeUpImg: '/images/peruvian-chicken-plate.png',
       category: 'Chicken',
       price: 22.44,
       restaurant: 'Mindy Fox',
@@ -117,6 +124,7 @@ export const allDishes = [
       id: 8,
       name: 'Chicken Yakhni Pulao',
       img: '/images/chicken-pulao.jpg',
+      closeUpImg: '/images/chicken-pulao-plate.png',
       category: 'Chicken',
       price: 18.36,
       restaurant: 'Chicken Experts',
@@ -125,17 +133,3 @@ export const allDishes = [
       isFavourite: false
    },
 ];
-
-
-const alt = [
-   {
-      id: 3,
-      name: 'Mixed salad with strawberries and watermelon',
-      img: '/images/dish-3.png',
-      category: 'Salad',
-      price: 12.44,
-      restaurant: 'Fruitful Delights',
-      description: 'Savor the sweetness of strawberries and the juiciness of watermelon in this refreshing mixed salad.',
-      rating: 4.5,
-   },
-]
